@@ -215,6 +215,9 @@ main {
 .bookmark {
   cursor: pointer;
   font-size: 1.3rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -223,4 +226,39 @@ main {
 @media (max-width: 768px) {
   header {
     flex-direction: column; /* Stack logo + categories + search */
-    align-items
+    align-items: flex-start;
+    padding: 12px 10px;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+  }
+
+  .search-bar {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+  }
+
+  .categories {
+    width: 100%;
+    overflow-x: auto;
+    padding: 8px 0;
+    gap: 6px;
+  }
+
+  #news-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .news-card {
+    margin: 0;
+  }
+}
