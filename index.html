@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="logo">Daily News</div>
+
+    <!-- Category Buttons -->
+    <div class="categories">
+      <button data-category="general" class="active">General</button>
+      <button data-category="technology">Technology</button>
+      <button data-category="politics">Politics</button>
+      <button data-category="sports">Sports</button>
+      <button data-category="entertainment">Entertainment</button>
+      <button data-category="business">Business</button>
+      <button data-category="health">Health</button>
+      <button data-category="science">Science</button>
+    </div>
+
+    <!-- Search + Filter -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search news...">
+      <button id="search-btn">Search</button>
+      <button id="filter-btn">Filter</button>
+      <button id="home-btn">← Home</button>
+    </div>
+  </header>
+
+  <!-- ===== Filter Panel ===== -->
+  <div class="filter-panel hidden" id="filter-panel">
+    <label>
+      From Date:
+      <input type="date" id="from-date">
+    </label>
+    <label>
+      To Date:
+      <input type="date" id="to-date">
+    </label>
+    <label>
+      Language:
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="ar">Arabic</option>
+        <option value="zh">Chinese</option>
+      </select>
+    </label>
+    <button id="apply-filter">Apply Filter</button>
+  </div>
+
+  <!-- ===== Main Content ===== -->
+  <main>
+    <div id="news-container" class="news-container">
+      <!-- JS injects news cards here -->
+    </div>
+  </main>
+
+  <script src="scrip.js"></script>
+</body>
+</html>
